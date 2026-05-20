@@ -4,6 +4,11 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    if (de > ate) {
+        alert ('Você inseriu os números corretos? Seu número inicial deve ser maior que o número maximo!');
+        return;
+    }
+
     let sorteados = [];
     let numero;
 
@@ -39,7 +44,7 @@ function alterarBotaoReiniciar() {
     }
 }
 
-//Reiniciar o jogo (zerar tudo)
+//Reiniciar o jogo (zerar)
 function reiniciar() {
     document.getElementById('quantidade').value = ''; 
     document.getElementById('de').value = '';
