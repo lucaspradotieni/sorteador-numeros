@@ -4,10 +4,16 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+//Aviso de número Inicial maior que Número Máximo
     if (de > ate) {
-        alert ('Você inseriu os números corretos? Seu número inicial deve ser maior que o número maximo!');
+        alert ('Você inseriu os números corretos? Seu número inicial deve ser menor que o número maximo!');
         return;
     }
+
+    if (quantidade > (ate - de + 1)) {
+    alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+    return;
+  }
 
     let sorteados = [];
     let numero;
